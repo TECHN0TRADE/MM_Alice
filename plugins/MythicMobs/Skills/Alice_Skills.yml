@@ -1,0 +1,49 @@
+#Reinforced
+Alice_Armament:
+  Conditions:
+    - stance Alice_normal
+  Cooldown: 0
+  Skills:
+    - setstance{stance=Alice_normal} @self
+    - summon{type=Armament_Parts;amount=50;radius=4} @self
+
+AliceArmamentSpawn:
+  Skills:
+    - Aura{onTick=AliceArmamentTick;onEnd=AliceArmamentEnd;interval=1;duration=200} @self
+
+AliceArmamentTick:
+  Skills:
+    - effect:particles{p=reddust;color=#FF00FF;amount=5;radius=1.5;}
+
+AliceArmamentEnd:
+  Skills:
+    - effect:particles{p=reddust;color=#FF00FF;amount=5;radius=1.5;}
+
+
+
+Alice_ReinforceStart:
+  Conditions:
+    - stance Alice_normal
+  Cooldown: 0
+  Skills:
+  - setstance{stance=Alice_reinforced} @self
+  - setspeed{speed=0;type=walking} @self
+  - equip{item=Alice_NoMoveBoots FEET}
+  - velocity{m=set;x=0;y=0;z=0} @self
+  - effect:lightning{repeat=10;repeatInterval=1} @self
+  - delay 20
+  - Aura{onTick=Alice_ReinforceTick;onEnd=Alice_ReinforceEnd;interval=1;duration=200} @self
+
+Alice_ReinforceTick:
+  Conditions:
+    - stance Alice_reinforced
+  Skills:
+    - effect:particlesphere{color=#6B00B1;amount=200;radius=1.5;yOffset=0.5} @self
+
+Alice_ReinforceEnd:
+  Conditions:
+    - stance Alice_reinforced
+  Skills:
+    - equip{item=Alice_Boots FEET}
+    - setstance{stance=Alice_normal} @self
+    - setspeed{speed=1;type=walking} @self

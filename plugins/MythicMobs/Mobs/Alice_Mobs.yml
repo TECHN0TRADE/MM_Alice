@@ -1,0 +1,77 @@
+Alice:
+  Type: ZOMBIE
+  Display:  '<#cb17dd>Alice</#cb17dd>'
+  Health: 100
+  Damage: 10
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    MaxCombatDistance: 30
+    KnockbackResistance: 0.5
+    Silent: true
+    PreventSunburn: true
+    AlwaysShowName: true
+  Equipment:
+    - Alice_Sword HAND
+    - Alice_Helmet HEAD
+    - Alice_Chest CHEST
+    - Alice_Pants LEGS
+    - Alice_Boots FEET
+  DamageModifiers:
+    - BLOCK_EXPLOSION 1
+    - CONTACT 0
+    - CRAMMING 0
+    - CUSTOM 1
+    - DRAGON_BREATH 0
+    - DROWNING 0
+    - DRYOUT 0
+    - ENTITY_ATTACK 1
+    - ENTITY_EXPLOSION 1
+    - ENTITY_SWEEP_ATTACK 1
+    - FALL 0
+    - FALLING_BLOCK 0
+    - FIRE 1
+    - FIRE_TICK 1
+    - FLY_INTO_WALL 0
+    - FREEZE 1
+    - HOT_FLOOR 1
+    - LAVA 1
+    - LIGHTNING 1
+    - MAGIC 0.25
+    - MELTING 0
+    - POISON 1
+    - PROJECTILE 1
+    - SONIC_BOOM 0
+    - STARVATION 0
+    - SUFFOCATION 0
+    - SUICIDE 0
+    - THORNS 0.5
+    - VOID 500
+    - WITHER 1
+  BossBar:
+    Enabled: true
+    Title: '<#cb17dd>Alice</#cb17dd>'
+    Range: 30
+    Color: PURPLE
+    Style: SOLID
+  AIGoalSelectors:
+    - clear
+    - meleeattack
+  AITargetSelectors:
+    - clear
+    - players
+    - attacker
+  Skills:
+    - setstance{stance=Alice_normal} @self ~onSpawn
+    - skill{s=Alice_Armament} @World ~onDamaged
+
+Armament_Parts:
+  Type: ARMOR_STAND
+  Options:
+    Invisible: true
+    Collidable: false
+    Invincible: true
+    KnockbackResistance: 1
+    NoGravity: true
+  Skills:
+    - skill{s=AliceArmamentSpawn} @self ~onSpawn

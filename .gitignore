@@ -1,0 +1,8 @@
+/*
+!/plugins
+/plugins/*
+!/plugins/MythicMobs/
+/plugins/MythicMobs/*
+!/plugins/MythicMobs/Items/
+!/plugins/MythicMobs/Mobs/
+!/plugins/MythicMobs/Skills/

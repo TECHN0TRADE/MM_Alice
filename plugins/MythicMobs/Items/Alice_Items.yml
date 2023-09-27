@@ -1,0 +1,57 @@
+Alice_Sword:
+  Id: GOLDEN_SWORD
+  Display: '<#cb17dd>Osmanthus Blade</#cb17dd>'
+  Enchantments:
+    - MENDING:1
+  Options:
+    Unbreakable: true
+  Hide:
+    - ENCHANTS
+
+Alice_Helmet:
+  Id: GOLDEN_HELMET
+  Enchantments:
+    - MENDING:1
+  Options:
+    Unbreakable: true
+  Hide:
+    - ENCHANTS
+
+Alice_Chest:
+  Id: GOLDEN_CHESTPLATE
+  Enchantments:
+    - MENDING:1
+  Options:
+    Unbreakable: true
+  Hide:
+    - ENCHANTS
+
+Alice_Pants:
+  Id: GOLDEN_LEGGINGS
+  Enchantments:
+    - MENDING:1
+  Options:
+    Unbreakable: true
+  Hide:
+    - ENCHANTS
+
+Alice_Boots:
+  Id: GOLDEN_BOOTS
+  Enchantments:
+    - MENDING:1
+  Options:
+    Unbreakable: true
+  Hide:
+    - ENCHANTS
+
+Alice_NoMoveBoots:
+  Id: GOLDEN_BOOTS
+  Enchantments:
+    - MENDING:1
+  Options:
+    Unbreakable: true
+  Hide:
+    - ENCHANTS
+  Attributes:
+    Boots:
+      KnockbackResistance: 1
